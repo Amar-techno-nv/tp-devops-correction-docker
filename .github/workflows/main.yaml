@@ -24,3 +24,4 @@ jobs:
       # Compilation et tests avec Maven
       - name: Build and test with Maven
         run: mvn clean verify
+        working-directory: ./simple-api
