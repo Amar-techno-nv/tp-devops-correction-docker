@@ -1,0 +1,11 @@
+- name: Launch API
+  docker_container:
+    name: simple-api
+    image: amartechnonv/tp-devops-simple-api
+    state: started
+    restart_policy: always
+    env:
+      DATABASE_HOST: tp-database
+      DATABASE_PASSWORD: pwd
+    networks:
+      - name: tp_net

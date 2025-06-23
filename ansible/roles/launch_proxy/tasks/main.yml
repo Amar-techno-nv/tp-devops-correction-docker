@@ -1,0 +1,13 @@
+- name: Launch HTTPD proxy container
+  docker_container:
+    name: httpd
+    image: amartechnonv/tp-devops-httpd:latest
+    ports:
+      - "80:80"
+    networks:
+      - name: tp_net
+    state: started
+    restart_policy: always
+    pull: yes
+  vars:
+    ansible_python_interpreter: /opt/docker_venv/bin/python

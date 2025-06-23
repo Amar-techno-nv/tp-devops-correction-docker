@@ -1,0 +1,7 @@
+all:
+  vars:
+    ansible_user: admin
+    ansible_ssh_private_key_file: /home/amar/Bureau/M2/S1/Technologies nouvelles/id_rsa
+  children:
+    prod:
+      hosts: amarazem33.takima.cloud
